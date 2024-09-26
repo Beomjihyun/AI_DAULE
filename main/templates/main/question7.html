@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="form" >
+            <form method="POST" action="{% url 'survey_submit' %}">
+                    {% csrf_token %}
+                <h2 class="formtitle">성향 테스트</h2>
+                <h3 class="formtitle">Q7. 당신은 어떤 종류의 음악을 좋아하시나요?</h3>
+                  <div class="checkbox-container">
+                      <div class="row">
+                          <label class="label2"><input type="checkbox" name="q10" value="발라드">발라드</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="k-pop">k-pop</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="ost">ost</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="트로트">트로트</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="사극">사극</label>
+                      </div>
+                      <div class="row">
+                          <label class="label2"><input type="checkbox" name="q10" value="클래식">클래식</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="재즈">재즈</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="힙합">힙합</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="록">록</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="인디">인디</label>
+                          <label class="label2"><input type="checkbox" name="q10" value="R&B">R&B</label>
+                      </div>
+                    </div><br/>
+            <a href="/question6" class="btn">이전</button></a>&nbsp;&nbsp;&nbsp;
+            <button class="btn" type="submit">제출</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

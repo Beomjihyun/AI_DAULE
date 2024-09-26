@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="slide">
+            <div class="form" >
+                <h2 class="formtitle">성향 테스트</h2>
+                <h3 class="formtitle">Q4. 답변모드를 선택해주세요.</h3>
+                     <label class="label"><input type="radio" name="q4" value="감성">감성적 답변 (ex.공감을 해줌)</label>
+                    <label class="label"><input type="radio" name="q4" value="이성">이성적 답변 (ex. 정직한 답변)</label>
+
+                <a href="/question3" class="btn" >이전</button></a>
+                <a href="/question5" class="btn" >다음</button></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="slide">
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q2. 당신의 연령대를 선택해 주세요.</h3>
+            <div class="row">
+                <label class="label"><input type="radio" name="q2" value="10">10대</label>
+                <label class="label"><input type="radio" name="q2" value="20">20대</label>
+                <label class="label"><input type="radio" name="q2" value="30">30대</label>
+                <label class="label"><input type="radio" name="q2" value="40">40대</label>
+                <label class="label"><input type="radio" name="q2" value="50">50대</label>
+            </div>
+
+            <div class="row">
+                <label class="label"><input type="radio" name="q1" value="60">60대</label>
+                <label class="label"><input type="radio" name="q1" value="70">70대</label>
+                <label class="label"><input type="radio" name="q1" value="80">80대</label>
+                <label class="label"><input type="radio" name="q1" value="90">90대</label>
+                <label class="label"><input type="radio" name="q1" value="100">100대</label>
+            </div>
+
+        <a href="/question1" class="btn" >이전</button></a>
+        <a href="/question3" class="btn" >다음</button></a>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+</html>

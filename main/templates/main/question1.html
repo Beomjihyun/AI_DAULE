@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="slider">
+          <div class="slide">
+            <div class="form" >
+            <h2 class="formtitle">성향 테스트</h2>
+            <h3 class="formtitle">Q1. 당신의 성별을 선택해주세요</h3>
+                <label class="label"><input type="radio" name="q1" value="반말">남성</label>
+                <label class="label"><input type="radio" name="q1" value="존댓말">여성</label>
+
+                <a href="/question2" class="btn" >다음</button></a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

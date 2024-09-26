@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="slide">
+            <div class="form" >
+                <h2 class="formtitle">성향 테스트</h2>
+                <h3 class="formtitle">Q5. 당신의 성격은 어떻습니까?</h3>
+                    <div class="choices">
+                        <div class="row">
+                          <label class="label"><input type="radio" name="q5" value="E">E</label>
+                          <label class="label"><input type="radio" name="q5" value="I">I</label>
+                        </div>
+                        <div class="row">
+                          <label class="label"><input type="radio" name="q6" value="N">N</label>
+                          <label class="label"><input type="radio" name="q6" value="S">S</label>
+                        </div>
+                        <div class="row">
+                          <label class="label"><input type="radio" name="q7" value="T">T</label>
+                          <label class="label"><input type="radio" name="q7" value="F">F</label>
+                        </div>
+                        <div class="row">
+                          <label class="label"><input type="radio" name="q8" value="P">P</label>
+                          <label class="label"><input type="radio" name="q8" value="J">J</label>
+                        </div>
+                    </div>
+
+                <a href="/question4" class="btn" >이전</button></a>
+                <a href="/question6" class="btn" >다음</button></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

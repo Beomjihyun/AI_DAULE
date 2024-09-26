@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8">
+	<title>Survey Form</title>
+
+  {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/question.css' %}">
+    <script type="text/javascript" src="{% static 'main/js/question.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+  <script>
+
+</script>
+
+</head>
+<body>
+<div class="container right-panel-active">
+    <div class="slider">
+      <div class="slide">
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q1. 당신의 성별을 선택해주세요</h3>
+            <label class="label"><input type="radio" name="q1" value="반말">남성</label>
+            <label class="label"><input type="radio" name="q1" value="존댓말">여성</label>
+
+            <button class="next" onclick="plusSlides(1)">다음</button>
+        </div>
+
+      </div>
+      <div class="slide">
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q2. 당신의 연령대를 선택해 주세요.</h3>
+            <div class="row">
+                <label class="label"><input type="radio" name="q1" value="10">10대</label>
+                <label class="label"><input type="radio" name="q1" value="20">20대</label>
+                <label class="label"><input type="radio" name="q1" value="30">30대</label>
+                <label class="label"><input type="radio" name="q1" value="40">40대</label>
+                <label class="label"><input type="radio" name="q1" value="50">50대</label>
+            </div>
+
+            <div class="row">
+                <label class="label"><input type="radio" name="q1" value="60">60대</label>
+                <label class="label"><input type="radio" name="q1" value="70">70대</label>
+                <label class="label"><input type="radio" name="q1" value="80">80대</label>
+                <label class="label"><input type="radio" name="q1" value="90">90대</label>
+                <label class="label"><input type="radio" name="q1" value="100">100대</label>
+            </div>
+
+        <button class="prev" onclick="plusSlides(-1)">이전</button>
+        <button class="next" onclick="plusSlides(1)">다음</button>
+        </div>
+      </div>
+
+        <div class="slide">
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q3. 반말과 존댓말 중 어떤 답변을 선호하시나요?</h3>
+            <label class="label"><input type="radio" name="q1" value="반말">반말</label>
+            <label class="label"><input type="radio" name="q1" value="존댓말">존댓말</label>
+
+        <button class="prev" onclick="plusSlides(-1)">이전</button>
+        <button class="next" onclick="plusSlides(1)">다음</button>
+        </div>
+      </div>
+
+<!--        <div class="slide">-->
+<!--        <div class="form" >-->
+<!--        <h2 class="formtitle">성향 테스트</h2>-->
+<!--        <h3 class="formtitle">Q4. 목소리 종류를 선택해 주세요.</h3>-->
+<!--            <label class="label"><input type="radio" name="q1" value="남성">남성</label>-->
+<!--            <label class="label"><input type="radio" name="q1" value="여성">여성</label>-->
+
+<!--        <button class="prev" onclick="plusSlides(-1)">이전</button>-->
+<!--        <button class="next" onclick="plusSlides(1)">다음</button>-->
+<!--        </div>-->
+<!--      </div>-->
+
+        <div class="slide">
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q5. 답변모드를 선택해주세요.</h3>
+             <label class="label"><input type="radio" name="q1" value="감성">감성적 답변 (ex.공감을 해줌)</label>
+            <label class="label"><input type="radio" name="q1" value="이성">이성적 답변 (ex. 정직한 답변)</label>
+
+        <button class="prev" onclick="plusSlides(-1)">이전</button>
+        <button class="next" onclick="plusSlides(1)">다음</button>
+        </div>
+      </div>
+        <div class="slide">
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q6. 당신의 성격은 어떻습니까?</h3>
+            <div class="choices">
+                <div class="row">
+                  <label class="label"><input type="radio" name="q1" value="E">E</label>
+                  <label class="label"><input type="radio" name="q1" value="I">I</label>
+                </div>
+                <div class="row">
+                  <label class="label"><input type="radio" name="q2" value="N">N</label>
+                  <label class="label"><input type="radio" name="q2" value="S">S</label>
+                </div>
+                <div class="row">
+                  <label class="label"><input type="radio" name="q3" value="T">T</label>
+                  <label class="label"><input type="radio" name="q3" value="F">F</label>
+                </div>
+                <div class="row">
+                  <label class="label"><input type="radio" name="q4" value="P">P</label>
+                  <label class="label"><input type="radio" name="q4" value="J">J</label>
+                </div>
+            </div>
+
+        <button class="prev" onclick="plusSlides(-1)">이전</button>
+        <button class="next" onclick="plusSlides(1)">다음</button>
+        </div>
+      </div>
+        <div class="slide">
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q7. 어떤 종류의 활동을 좋아하나요?</h3>
+
+
+
+            <div class="checkbox-container1">
+                <div class="row">
+                    <label class="label2"><input type="checkbox" name="q1" value="운동">운동</label>
+                    <label class="label2"><input type="checkbox" name="q1" value="독서">독서</label>
+                    <label class="label2"><input type="checkbox" name="q1" value="음악감상">음악감상</label>
+                </div>
+                <div class="row">
+                    <label class="label2"><input type="checkbox" name="q1" value="여행">여행</label>
+                    <label class="label2"><input type="checkbox" name="q1" value="요리">요리</label>
+                    <label class="label2"><input type="checkbox" name="q1" value="게임">게임</label>
+                    <label class="label2"><input type="checkbox" name="q1" value="그림">그림</label>
+                </div>
+            </div>
+
+
+        <button class="prev" onclick="plusSlides(-1)">이전</button>
+        <button class="next" onclick="plusSlides(1)">다음</button>
+        </div>
+      </div>
+      <div class="slide">
+          <div class="form" >
+            <h2 class="formtitle">성향 테스트</h2>
+            <h3 class="formtitle">Q8. 당신은 어떤 종류의 음악을 좋아하시나요?</h3>
+
+              <div class="checkbox-container">
+                  <label class="label2"><input type="checkbox" name="q1" value="발라드">발라드</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="k-pop">k-pop</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="ost">ost</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="트로트">트로트</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="사극">사극</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="클래식">클래식</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="재즈">재즈</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="힙합">힙합</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="록">록</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="인디">인디</label>
+                  <label class="label2"><input type="checkbox" name="q1" value="R&B">R&B</label>
+                </div>
+
+
+
+
+            <button class="prev" onclick="plusSlides(-1)">이전</button>
+            <a href="/result"><button class="submit">제출</button></a>
+          </div>
+
+      </div>
+
+      <div class="slider-nav">
+        <span class="slider-dot active"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+      </div>
+    </div>
+</div>
+
+</body>

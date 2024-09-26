@@ -1,0 +1,5 @@
+Emotion: happy
+Emotion: sad
+Emotion: sad
+Emotion: sad
+Emotion: happy

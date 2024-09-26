@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="form" >
+            <h2 class="formtitle">성향 테스트</h2>
+            <h3 class="formtitle">Q6. 어떤 종류의 활동을 좋아하나요?</h3>
+                <div class="checkbox-container1">
+                    <div class="row">
+                        <label class="label2"><input type="checkbox" name="q9" value="운동">운동</label>
+                        <label class="label2"><input type="checkbox" name="q9" value="독서">독서</label>
+                        <label class="label2"><input type="checkbox" name="q9" value="음악감상">음악감상</label>
+                    </div>
+                    <div class="row">
+                        <label class="label2"><input type="checkbox" name="q9" value="여행">여행</label>
+                        <label class="label2"><input type="checkbox" name="q9" value="요리">요리</label>
+                        <label class="label2"><input type="checkbox" name="q9" value="게임">게임</label>
+                        <label class="label2"><input type="checkbox" name="q9" value="그림">그림</label>
+                    </div>
+                </div>
+         <a href="/question5" class="btn" >이전</button></a>
+        <a href="/question7" class="btn" >다음</button></a>
+        </div>
+    </div>
+
+
+</body>
+</html>

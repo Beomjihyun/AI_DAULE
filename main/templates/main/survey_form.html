@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'survey_form' %}" method="post">
+    <!-- Rest of your form code -->
+    {% csrf_token %}
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

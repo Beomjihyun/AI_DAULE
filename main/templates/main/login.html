@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+</head>
+<body>
+    <div class="container right-panel-active">
+        <!-- Sign Up -->
+        <div class="container__form container--signup">
+            <form action="{% url 'login' %}" method="POST" class="form">
+                {% csrf_token %}
+                <h2 class="form__title">Sign Up</h2>
+                <input type="text" name="name" placeholder="이름(name)" class="input" required>
+                <input type="text" name="phone_number" placeholder="전화번호(phonenumber)" class="input" required>
+                <button type="submit" class="btn" name="register">Sign Up</button>
+            </form>
+        </div>
+        <!-- Sign In -->
+        <div class="container__form container--signin">
+            <form action="{% url 'index' %}" method="POST" class="form" id="loginForm">
+                {% csrf_token %}
+                <h2 class="form__title">Sign In</h2>
+                <input type="text" name="login_name" placeholder="이름(name)" class="input" required>
+                <input type="password" name="login_phone_number" placeholder="전화번호(phonenumber)" class="input" required>
+                <button type="submit" class="btn" name="login">Sign In</button>
+            </form>
+        </div>
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <button class="btn" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popupContainer" style="display: none;">
+        <div class="popup">
+            <p>회원가입이 완료되었습니다.</p>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const signInBtn = document.getElementById("signIn");
+    const signUpBtn = document.getElementById("signUp");
+    const container = document.querySelector(".container");
+
+    signInBtn.addEventListener("click", () => {
+        container.classList.remove("right-panel-active");
+    });
+
+    signUpBtn.addEventListener("click", () => {
+        container.classList.add("right-panel-active");
+    });
+
+    const signUpForm = document.querySelector("#loginForm");
+    signUpForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const loginName = document.querySelector('input[name="login_name"]').value;
+        const loginPhoneNumber = document.querySelector('input[name="login_phone_number"]').value;
+        const signUpName = document.querySelector('input[name="name"]').value;
+        const signUpPhoneNumber = document.querySelector('input[name="phone_number"]').value;
+
+        if (loginName === signUpName && loginPhoneNumber === signUpPhoneNumber) {
+            // The login details are correct, update the form action URL and submit the form
+            signUpForm.action = "index/";
+            signUpForm.submit();
+
+            // Save user information to the database
+            saveUserInfo(loginName, loginPhoneNumber);
+        } else {
+            // The login details are incorrect, display an error message or take appropriate action
+            alert("로그인 정보가 올바르지 않습니다.");
+        }
+    });
+});
+
+function saveUserInfo(username, phoneNumber) {
+    // Perform a database query or API request to save the user information
+    // Assuming you have a database connection called `dbConnection` and a user's collection/table
+    dbConnection.collection('Users').insertOne({ name: name, phone_number: phoneNumber }, function(err, result) {
+        if (err) {
+            console.error("Error saving user information:", err);
+        } else {
+            console.log("User information saved successfully");
+        }
+    });
+}
+
+function showPopup() {
+    var popupContainer = document.getElementById('popupContainer');
+    popupContainer.style.display = 'block';
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'main/css/login.css' %}">
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="slide">
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q3. 반말과 존댓말 중 어떤 답변을 선호하시나요?</h3>
+            <label class="label"><input type="radio" name="q3" value="반말">반말</label>
+            <label class="label"><input type="radio" name="q3" value="존댓말">존댓말</label>
+
+        <a href="/question2" class="btn" >이전</button></a>
+        <a href="/question4" class="btn" >다음</button></a>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+</html>
